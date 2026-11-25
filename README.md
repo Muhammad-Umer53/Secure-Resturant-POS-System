@@ -213,7 +213,7 @@ implemented features.
 -   **Language:** x86 Assembly
 -   **Assembler:** MASM
 -   **Library:** Irvine32
--   **Development Environment:** \[Add your IDE and version\]
+-   **Development Environment:** Microsoft Visual Studio 2022
 -   **Platform:** Windows
 
 ## Project Structure
@@ -268,8 +268,8 @@ The source code contains these initial demonstration credentials:
 
   Role      Initial Password
   --------- ------------------
-  Cashier   `1234`
-  Manager   `9999`
+  Cashier   `c1234`
+  Manager   `m9999`
 
 The manager can change the cashier password from the manager menu.
 
@@ -298,9 +298,8 @@ limitations include:
 
   Name                Roll Number       Contribution
   ------------------- ----------------- ------------------
-  \[Team Member 1\]   \[Roll Number\]   \[Contribution\]
-  \[Team Member 2\]   \[Roll Number\]   \[Contribution\]
-  \[Team Member 3\]   \[Roll Number\]   \[Contribution\]
+  Muhammad Umer       25K-0983          Security Features
+  Khizar Khursheed    25K-0916          Developed the Menus
 
 ## Course Information
 
@@ -319,9 +318,9 @@ limitations include:
 
   Semester                            Fall 2026
 
-  Section                             \[Your Section\]
+  Section                             BCS-3F
 
-  Instructor                          Mr. Abdullah Shaikh
+  Instructor                          Miss Fareeha Jabeen
   -----------------------------------------------------------------------
 
 ## Disclaimer

@@ -244,7 +244,7 @@ To assemble and run this project, you need:
 1.  Clone or download this repository:
 
     ``` bash
-    git clone [YOUR_REPOSITORY_URL]
+    git clone https://github.com/Muhammad-Umer53/Secure-Resturant-POS-System
     ```
 
 2.  Open the project in your configured MASM development environment.
@@ -299,29 +299,8 @@ limitations include:
   Name                Roll Number       Contribution
   ------------------- ----------------- ------------------
   Muhammad Umer       25K-0983          Security Features
-  Khizar Khursheed    25K-0916          Developed the Menus
+  Khizar Khursheed    25K-0916          Developed the Menus and other related features
 
-## Course Information
-
-  -----------------------------------------------------------------------
-  Detail                              Information
-  ----------------------------------- -----------------------------------
-  University                          FAST National University of
-                                      Computer and Emerging Sciences
-
-  Campus                              Karachi
-
-  Course                              Computer Organization and Assembly
-                                      Language (COAL)
-
-  Course Code                         EL-2003
-
-  Semester                            Fall 2026
-
-  Section                             BCS-3F
-
-  Instructor                          Miss Fareeha Jabeen
-  -----------------------------------------------------------------------
 
 ## Disclaimer
 

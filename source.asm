@@ -10,7 +10,7 @@ GST_PCT = 5
 LOCK_SECS = 15
 
 .data
-    msgWelcome      BYTE 13,10,"     Welcome to Secure Restaurant POS System      ",13,10,0
+    msgWelcome      BYTE 13,10,"     Welcome to Restaurant POS System      ",13,10,0
 
     msgPass         BYTE "Enter password: ",0
     msgBad          BYTE "Wrong password!",13,10,0
@@ -52,7 +52,7 @@ LOCK_SECS = 15
                 "Choice: ",0
     msgQty          BYTE "Quantity: ",0
     msgRemQty       BYTE "Quantity to remove: ",0
-    msgEmpty        BYTE "Cart is empty!",13,10,0
+    msgEmpty        BYTE "Order list is empty!",13,10,0
     msgCancel       BYTE "Order cancelled.",13,10,0
     msgSub          BYTE 13,10,"Subtotal: Rs ",0
     msgGst          BYTE "GST 5%:   Rs ",0
@@ -85,11 +85,11 @@ LOCK_SECS = 15
     msgSpace        BYTE " ",0
     msgLockEnd      BYTE 13,10,"Unlocked. You can try again.",13,10,0
 
-    msgCurrentCart  BYTE 13,10,"--- CURRENT CART ---",13,10,0
+    msgCurrentCart  BYTE 13,10,"--- CURRENT ORDER ---",13,10,0
     msgRemoveMenu   BYTE 13,10,"--- REMOVE ITEM ---",13,10,
                     "Enter item number (1-5), or 0 to go back: ",0
     msgNoItems      BYTE "There are no items available to remove.",13,10,0
-    msgNotInCart    BYTE "This item is not in your cart.",13,10,0
+    msgNotInCart    BYTE "This item is not in your order.",13,10,0
     msgRemoved      BYTE "Order has been updated successfully.",13,10,0
     msgRemoveQty    BYTE "Specify the quantity you want to remove? ",0
 
@@ -199,7 +199,6 @@ AuthenticateLogin ENDP
 
 
 ; Manager re-authentication.
-; Input EBX = expected password hash. Returns EAX=1 success, 0 failure.
 CheckPassword PROC
 PasswordStart:
     mov triesLeft, 3
@@ -230,7 +229,6 @@ PasswordOK:
 CheckPassword ENDP
 
 
-; Manager-only caller. Stores only the hash, not plaintext.
 ChangeCashierPassword PROC
     pushad
 NewPasswordTry:
@@ -543,8 +541,6 @@ AddSold:
     ret
 DoOrderProc ENDP
 
-; ---- display current cart ----
-; EAX = 1 if cart has items, 0 if empty
 
 ShowCart PROC
     push esi
@@ -638,9 +634,6 @@ HasBest:
 PrintReport ENDP
 
 
-; Reads a signed integer and repeats when Irvine32 ReadInt
-; reports invalid input by setting the Carry Flag.
-; Output: EAX = valid integer.
 ReadValidInt PROC
 ReadAgain:
     call ReadInt
